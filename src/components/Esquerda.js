@@ -1,12 +1,12 @@
 import Stories from "./Stories";
 import Posts from "./Posts";
 
-export default function Esquerda(like, setLike) {
+export default function Esquerda() {
 
     return (
         <div class="esquerda">
         <Stories />
-        <Posts like={like} setLike={setLike} />
+        <Posts />
         </div>
     );
   }

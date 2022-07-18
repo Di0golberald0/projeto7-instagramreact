@@ -1,14 +1,21 @@
+import { useState } from "react";
+
 export default function Posts(like, setLike) {
 
-  function likepost() {
-    if(like === false) { 
-      setLike(true)
+  const [like, setLike] = useState("heart-outline");
+
+  function likebuttom() {
+    if(like === "heart-outline") { 
+      setLike("heart")
+    }
+    else{
+      setLike("heart-outline")
     }
   }
 
-  function unlikepost() {
-    if(like === true) { 
-      setLike(false)
+  function likepost() {
+    if(like === "heart-outline") { 
+      setLike("heart")
     }
   }
 
@@ -51,7 +58,7 @@ export default function Posts(like, setLike) {
         <div class="fundo">
           <div class="acoes">
             <div>
-              <ion-icon onClick={unlikepost} name="heart-outline"></ion-icon>
+              <ion-icon onClick={likebuttom} className={like ? 'selecionado' : ''}  name="heart-outline"></ion-icon>
               <ion-icon name="chatbubble-outline"></ion-icon>
               <ion-icon name="paper-plane-outline"></ion-icon>
             </div>
