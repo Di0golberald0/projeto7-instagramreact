@@ -1,7 +1,6 @@
-import { useState } from "react";
-import Navbar from "./contexts/Navbar";
-import Corpo from "./contexts/Corpo";
-import FundoMobile from "./contexts/FundoMobile";
+import Navbar from "./components/Navbar";
+import Corpo from "./components/Corpo";
+import FundoMobile from "./components/FundoMobile";
 
 export default function App() {
 
