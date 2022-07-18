@@ -15,7 +15,7 @@ export default function Posts() {
       "conteudoImg" : "assets/img/dog.svg",
       "curtidasImg" : "assets/img/adorable_animals.svg",
       "curtidasName" : "adorable_animals",
-      "curtidasImg" : "outras 99.159 pessoas",
+      "curtidasNumero" : "outras 99.159 pessoas",
     }
   ]
   return (
