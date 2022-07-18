@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Posts(like, setLike) {
+export default function Posts() {
 
   const [like, setLike] = useState("heart-outline");
 
