@@ -1,6 +1,23 @@
-import Post from "./Post";
+import { useState } from "react";
 
 export default function Posts() {
+
+  const [like, setLike] = useState("heart-outline");
+
+  function likebuttom() {
+    if(like === "heart-outline") { 
+      setLike("heart")
+    }
+    else{
+      setLike("heart-outline")
+    }
+  }
+
+  function likepost() {
+    if(like === "heart-outline") { 
+      setLike("heart")
+    }
+  }
 
   const posts = [
     {
@@ -23,13 +40,43 @@ export default function Posts() {
 
   return (
     <div class="posts">
-      {posts.map(post => 
-      <Post 
-      usuarioImg={post.usuarioImg} usuarioName={post.usuarioName} 
-      conteudoImg={post.conteudoImg} curtidasImg={post.curtidasImg} 
-      curtidasName={post.curtidasName} curtidasNumero={post.curtidasNumero}
-       />        
-       )}
+      {posts.map(post =>         
+    <div class="post">
+        <div class="topo">
+          <div class="usuario">
+            <img src={post.usuarioImg} />
+            {post.usuarioName}
+          </div>
+          <div class="acoes">
+            <ion-icon name="ellipsis-horizontal"></ion-icon>
+          </div>
+        </div>
+        
+        <div onClick={likepost} class="conteudo">
+          <img src={post.conteudoImg} />
+        </div>
+        
+        <div class="fundo">
+          <div class="acoes">
+            <div>
+              <ion-icon name={like} onClick={likebuttom} className={(like === "heart") ? 'selecionado' : ''}></ion-icon>
+              <ion-icon name="chatbubble-outline"></ion-icon>
+              <ion-icon name="paper-plane-outline"></ion-icon>
+            </div>
+            
+            <div>
+              <ion-icon name="bookmark-outline"></ion-icon>
+            </div>
+          </div>
+          
+          <div class="curtidas">
+            <img src={post.curtidasImg} />
+            <div class="texto">
+              Curtido por <strong>{post.curtidasName}</strong> e <strong>{post.curtidasNumero}</strong>
+            </div>
+          </div>
+        </div>
+      </div>)}
     </div>
   );
 }
