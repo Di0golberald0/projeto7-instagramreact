@@ -40,7 +40,7 @@ export default function Sugestoes() {
         </div>
         
         {sugestoes.map(sugestao =>         
-        `<div class="sugestao">
+        <div class="sugestao">
           <div class="usuario">
             <img src={sugestao.img} />
             <div class="texto">
@@ -49,7 +49,7 @@ export default function Sugestoes() {
             </div>
           </div>
           <div class="seguir">Seguir</div>
-        </div>`)}
+        </div>)}
 
   </div>
     );

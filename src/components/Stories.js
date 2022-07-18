@@ -40,12 +40,12 @@ return (
     <div class="stories">
 
       {stories.map(story =>         
-    `<div class="story">
+    <div class="story">
       <div class="imagem">
         <img src={story.imagem} />
       </div>
       <div class="usuario">{story.usuario}</div>
-    </div>`)}
+    </div>)}
 
       <div class="setinha">
         <ion-icon name="chevron-forward-circle"></ion-icon>
