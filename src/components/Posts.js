@@ -1,4 +1,16 @@
-export default function Posts() {
+export default function Posts(like, setLike) {
+
+  function likepost() {
+    if(like === false) { 
+      setLike(true)
+    }
+  }
+
+  function unlikepost() {
+    if(like === true) { 
+      setLike(false)
+    }
+  }
 
   const posts = [
     {
@@ -32,14 +44,14 @@ export default function Posts() {
           </div>
         </div>
         
-        <div class="conteudo">
+        <div onClick={likepost} class="conteudo">
           <img src={post.conteudoImg} />
         </div>
         
         <div class="fundo">
           <div class="acoes">
             <div>
-              <ion-icon name="heart-outline"></ion-icon>
+              <ion-icon onClick={unlikepost} name="heart-outline"></ion-icon>
               <ion-icon name="chatbubble-outline"></ion-icon>
               <ion-icon name="paper-plane-outline"></ion-icon>
             </div>

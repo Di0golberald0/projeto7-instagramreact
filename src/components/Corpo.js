@@ -1,11 +1,11 @@
 import Esquerda from "./Esquerda";
 import Sidebar from "./Sidebar";
 
-export default function Corpo() {
+export default function Corpo(like, setLike) {
 
     return (
         <div class="corpo">
-        <Esquerda />
+        <Esquerda like={like} setLike={setLike} />
         <Sidebar />
         </div>
     );
