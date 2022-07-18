@@ -38,7 +38,7 @@ export default function Post( { usuarioImg, usuarioName, conteudoImg, curtidasIm
         <div class="fundo">
           <div class="acoes">
             <div>
-              <ion-icon name={like} onClick={likebuttom} className={(like === "heart") ? 'selecionado' : ''}></ion-icon>
+              <ion-icon name={like} onClick={likebuttom} color={(like === "heart") ? "danger" : ""}></ion-icon>
               <ion-icon name="chatbubble-outline"></ion-icon>
               <ion-icon name="paper-plane-outline"></ion-icon>
             </div>
